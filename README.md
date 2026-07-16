@@ -17,7 +17,7 @@ This project automatically spins up the following resources in AWS:
 ---
 
 ## File Structure
-
+.
 ├── .gitignore             # Tells Git to ignore sensitive files (.tfstate, .tfvars)
 ├── cloud-init.yaml        # Bootstrapping script for Amazon Linux 2023
 ├── ec2.tf                 # Defines the EC2 instance and user_data association
