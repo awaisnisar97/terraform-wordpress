@@ -12,11 +12,3 @@ crash.log
 
 # macOS
 .DS_Store
-
-# Ignore local state files
-*.tfstate
-*.tfstate.backup
-
-# Ignore local variable files
-*.tfvars
-*.tfvars.json
