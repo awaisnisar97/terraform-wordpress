@@ -17,6 +17,7 @@ This project automatically spins up the following resources in AWS:
 ---
 
 ## File Structure
+```text
 .
 ├── .gitignore             # Tells Git to ignore sensitive files (.tfstate, .tfvars)
 ├── cloud-init.yaml        # Bootstrapping script for Amazon Linux 2023
@@ -27,7 +28,7 @@ This project automatically spins up the following resources in AWS:
 ├── sg.tf                  # Defines the security group and port access rules
 ├── terraform.tfvars       # (Ignored) Local variables for custom settings
 └── variables.tf           # Declarations for input variables
-
+```
 
 <img width="1080" height="579" alt="Screenshot 2026-07-16 at 17 04 34" src="https://github.com/user-attachments/assets/06b7a980-e0ae-43da-a682-3e5654918300" />
 
