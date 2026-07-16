@@ -1,0 +1,37 @@
+#cloud-config
+
+package_update: true
+
+packages:
+  - httpd
+  - php
+  - php-mysqlnd
+  - php-gd
+  - php-xml
+  - php-mbstring
+  - wget
+  - tar
+
+runcmd:
+  # Start and enable Apache
+  - systemctl enable httpd
+  - systemctl start httpd
+
+  # Download WordPress
+  - cd /tmp
+  - wget https://wordpress.org/latest.tar.gz
+
+  # Extract WordPress
+  - tar -xzf latest.tar.gz
+
+  # Copy WordPress files to Apache directory
+  - cp -r wordpress/* /var/www/html/
+
+  # Set permissions
+  - chown -R apache:apache /var/www/html
+  - chmod -R 755 /var/www/html
+
+  # Restart Apache
+  - systemctl restart httpd
+
+final_message: "WordPress installation completed"
